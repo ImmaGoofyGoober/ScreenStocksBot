@@ -12,6 +12,10 @@ void Strategy::ExecuteMarketCommand(const std::string& stockID, const std::strin
 	const std::string commandPath{ commandsPath + "\\" + stockID + "\\" + commandName + ".json" };
 	std::ifstream commandFileInput(commandPath);
 
+	if (!commandFileInput){
+		return;
+	}
+
 	json command;
 	commandFileInput >> command;
 	commandFileInput.close();
