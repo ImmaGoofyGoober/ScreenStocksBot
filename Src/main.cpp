@@ -22,7 +22,7 @@ int main() {
 		auto currentTime = std::chrono::steady_clock::now();
 		auto elapsedTime = std::chrono::duration_cast<std::chrono::seconds>(currentTime - startTime);
 
-		if (currentTime - startTime >= interval) {
+		if (elapsedTime >= interval) {
 			parser.Start();
 
 			startTime = currentTime;
