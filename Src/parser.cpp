@@ -61,7 +61,7 @@ void Parser::Start() {
 				strategy_->ExecuteLong(stock["price"]);
 				strategy_->ExecuteShort(stock["price"]);
 
-				marketFile.close();
+				break;
 			}
 		}
 	}
